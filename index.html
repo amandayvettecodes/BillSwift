@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BillSwift - Invoice Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="invoice-container">
+    <h1>BillSwift</h1>
+    <h2>Invoice Generator</h2>
+
+    <form id="invoiceForm">
+      <div class="section">
+        <label>Business Name</label>
+        <input type="text" id="businessName" placeholder="Your Company LLC" />
+      </div>
+
+      <div class="section">
+        <label>Client Name</label>
+        <input type="text" id="clientName" placeholder="Client Name" />
+      </div>
+
+      <div class="section">
+        <label>Invoice #</label>
+        <input type="text" id="invoiceNumber" placeholder="0001" />
+      </div>
+
+      <div class="section">
+        <label>Description of Services</label>
+        <textarea id="description" placeholder="Design work, consulting, etc."></textarea>
+      </div>
+
+      <div class="section">
+        <label>Hours / Quantity</label>
+        <input type="number" id="quantity" placeholder="10" />
+      </div>
+
+      <div class="section">
+        <label>Rate per Hour / Item</label>
+        <input type="number" id="rate" placeholder="50" />
+      </div>
+
+      <div class="section">
+        <label>Tax (%)</label>
+        <input type="number" id="tax" placeholder="8.25" />
+      </div>
+
+      <div class="section">
+        <label>Total</label>
+        <input type="text" id="total" readonly />
+      </div>
+
+      <button type="button" id="downloadBtn">Download PDF</button>
+    </form>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
